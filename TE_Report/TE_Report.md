@@ -188,7 +188,7 @@
 
 **Expected Result:** The total amount should be calculated correctly based on selected products.
 
-**Actual Result:** Total amount of ₹28,297 was calculated and verified successfully.
+**Actual Result:** Total amount of ₹28,498 was calculated and verified successfully.
 
 **Status:** PASS
 
