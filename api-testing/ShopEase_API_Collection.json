@@ -1,0 +1,239 @@
+{
+  "info": {
+    "_postman_id": "7f54411b-b2bc-4f33-9f32-5074ad77fa91",
+    "name": "ShopEase API Testing",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "58732654",
+    "_collection_link": "https://go.postman.co/collection/58732654-7f54411b-b2bc-4f33-9f32-5074ad77fa91?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "API-TC-001 - Get All Products",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/products",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "products"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API-TC-002 - Get Product by Valid ID",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/products/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "products",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API-TC-003 - Get Product with Invalid ID",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/products/99",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "products",
+            "99"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API-TC-004 - Login with Valid Credentials",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"test@example.com\",\r\n    \"password\": \"Test@123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API-TC-005 - Login with Invalid Credentials",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"wrong@example.com\",\r\n    \"password\": \"wrong123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API-TC-006 - Login with Empty Credentials",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"\",\r\n    \"password\": \"\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API-TC-007 - Create Order with Valid Data",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"customer\": {\r\n        \"userId\": 1,\r\n        \"name\": \"Test User\",\r\n        \"email\": \"test@example.com\",\r\n        \"address\": \"Bengaluru\"\r\n    },\r\n    \"items\": [\r\n        {\r\n            \"id\": 2,\r\n            \"name\": \"Laptop\",\r\n            \"price\": 59999,\r\n            \"quantity\": 1\r\n        },\r\n        {\r\n            \"id\": 1,\r\n            \"name\": \"Smartphone\",\r\n            \"price\": 24999,\r\n            \"quantity\": 1\r\n        }\r\n    ],\r\n    \"totalAmount\": 84998,\r\n    \"paymentMethod\": \"UPI\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/orders",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "orders"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API-TC-008 - Create Order with Invalid Data",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"customer\": {\r\n        \"userId\": 1,\r\n        \"name\": \"Test User\",\r\n        \"email\": \"test@example.com\"\r\n    },\r\n    \"items\": [],\r\n    \"totalAmount\": 0,\r\n    \"paymentMethod\": \"\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/orders",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "orders"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

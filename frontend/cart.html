@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shopping Cart - ShopEase</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                ShopEase
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cart.html">Cart 🛒</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- Cart -->
+
+    <main class="cart-page">
+
+        <h1>Shopping Cart</h1>
+
+        <div id="cartItems" class="cart-items">
+        </div>
+
+
+        <!-- Cart Summary -->
+
+        <section class="cart-summary">
+
+            <h2>Order Summary</h2>
+
+            <p>
+                Total Items:
+                <span id="totalItems">0</span>
+            </p>
+
+            <p>
+                Total Amount:
+                ₹<span id="totalPrice">0</span>
+            </p>
+
+            <button
+                class="checkout-btn"
+                onclick="goToCheckout()">
+
+                Proceed to Checkout
+
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 ShopEase | Smart E-Commerce QA Platform
+        </p>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
