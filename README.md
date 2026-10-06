@@ -49,8 +49,9 @@ Smart-Ecommerce-QA-Platform/
 ├── docs/
 ├── TE_Report/
 ├── Defect_Report/
-└── README.md
-```
+├── API_Testing/
+├── README.md
+└── .gitignore
 
 ## Testing Coverage
 
